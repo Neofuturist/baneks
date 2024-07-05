@@ -27,7 +27,7 @@ def get_text_messages(message):
         markup.add(btn1)
         bot.send_message(message.from_user.id, anek, parse_mode='Markdown', disable_web_page_preview=True, reply_markup=markup)
     elif message.text.isdigit():
-        if (int(message.text) >= 1 <= 1142):
+        if 1 <= int(message.text) <= 1142:
             anek = get_anek(message.text)
             markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
             btn1 = types.KeyboardButton("Случайный анек")
