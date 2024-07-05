@@ -15,7 +15,7 @@ def start(message):
     markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
     btn1 = types.KeyboardButton("Случайный анек")
     markup.add(btn1)
-    bot.send_message(message.from_user.id, "Нажми на кнопку, чтобы прочитать анек. \nВведи номер анека, чтобы прочитать его.", reply_markup=markup)
+    bot.send_message(message.from_user.id, "Нажми на кнопку или отправь номер анека.", reply_markup=markup)
 
 
 @bot.message_handler(content_types=['text'])
